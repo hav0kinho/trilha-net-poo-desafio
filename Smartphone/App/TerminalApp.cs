@@ -1,26 +1,64 @@
-﻿namespace Smartphone.App;
+﻿using System.Collections;
+using Smartphone.Models;
+
+namespace Smartphone.App;
 
 public class TerminalApp
 {
-    private string NomeDev {get; set;}
-    private const string Opcoes = @"
-    1 - Listar estoque
-    2 - Adicionar Nokia
-    3 - Adicionar Iphone
-    4 - Sobre
-    5 - Sair
-    "; 
+    public string NomeDev {get; set;}
+    ArrayList<Nokia> ListaNokia {get; set;}
+    ArrayList<Iphone> ListaIphone {get; set;}
 
     public TerminalApp(string nome)
     {
         this.NomeDev = nome;
+        this.ListaNokia = new ArrayList();
+        this.ListaIphone = new ArrayList();
     }
 
-    public void Inicio()
+    public void Inicializar()
     {
-        Console.WriteLine($"Loja de Smartphones");
-        Console.WriteLine($"\n{Opcoes}\n");
+        int opcao = 0;
+        while(true)
+        {
+            this.Inicio();
+            switch(opcao)
+            {
+                case 1:
+                    ListarEstoque();
+                    break;
+                case 2:
+                    AdicionarNokia();
+                    break;
+                case 3:
+                    AdicionarIphone();
+                    break;
+                case 4:
+                    Sobre();
+                    break;
+                case 5:
+                    Sair();
+                    break;  
+            }
+        }
 
-        Console.WriteLine($"\n\n=-=-=Desenvolvido por {NomeDev} durante DecolaTech 2024=-=-=");
+    }
+
+
+    private void Inicio()
+    {
+        string Inicio = 
+$@"
+=-=-=-=-=-=-=-=-=-=-=-=-=Loja de Smartphones=-=-=-=-=-=-=-=-=-=-=-=-=
+
+1 - Listar estoque
+2 - Adicionar Nokia
+3 - Adicionar Iphone
+4 - Sobre
+5 - Sair
+
+=-=-=Desenvolvido por {NomeDev} durante DecolaTech 2024=-=-=
+"; 
+        Console.WriteLine(Inicio);
     }
 }
