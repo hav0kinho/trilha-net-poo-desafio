@@ -51,17 +51,31 @@ public class TerminalApp
         Console.Clear();
         string listagem = "*********************NOKIAS**********************\n";
         
-        foreach(Nokia nokia in ListaNokia)
+        if(ListaNokia.Count > 0)
         {
-            listagem += $"Modelo: {nokia.Modelo} | IMEI: {nokia.IMEI}\n";
+            foreach(Nokia nokia in ListaNokia)
+            {
+                listagem += $"Modelo: {nokia.Modelo} | IMEI: {nokia.IMEI}\n";
+            }
+        } 
+        else
+        {
+            listagem += "\n[Não existe smartphones da marca Nokia no estoque!]\n";
         }
+
 
         listagem += "\n*********************IPHONES*********************\n";
 
-
-        foreach(Iphone iphone in ListaIphone)
+        if(ListaIphone.Count > 0)
         {
-            listagem += $"Modelo: {iphone.Modelo} | IMEI: {iphone.IMEI}\n";
+            foreach(Iphone iphone in ListaIphone)
+            {
+                listagem += $"Modelo: {iphone.Modelo} | IMEI: {iphone.IMEI}\n";
+            }
+        }
+        else
+        {
+            listagem += "\n[Não existe smartphones da marca iPhone no estoque!]\n";
         }
 
         Console.WriteLine(listagem);
