@@ -2,8 +2,9 @@ namespace Smartphone.Models
 {
     public abstract class SmartphoneImp
     {
+        // Realizei algumas mudanças no encapsulament do modelo para que encaixa-se na expansão do projeto
         public string Numero { get; set; }
-        // TODO: Implementar as propriedades faltantes de acordo com o diagrama (X)
+
         public string Modelo { get; set; }
         public string IMEI { get; set; }
         private int Memoria { get; set; }
