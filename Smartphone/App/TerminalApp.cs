@@ -6,14 +6,14 @@ namespace Smartphone.App;
 public class TerminalApp
 {
     public string NomeDev {get; set;}
-    ArrayList<Nokia> ListaNokia {get; set;}
-    ArrayList<Iphone> ListaIphone {get; set;}
+    List<Nokia> ListaNokia {get; set;}
+    List<Iphone> ListaIphone {get; set;}
 
     public TerminalApp(string nome)
     {
         this.NomeDev = nome;
-        this.ListaNokia = new ArrayList();
-        this.ListaIphone = new ArrayList();
+        this.ListaNokia = new List<Nokia>();
+        this.ListaIphone = new List<Iphone>();
     }
 
     public void Inicializar()
@@ -21,7 +21,9 @@ public class TerminalApp
         int opcao = 0;
         while(true)
         {
+            Console.Clear();
             this.Inicio();
+            opcao =  int.Parse(Console.ReadLine());
             switch(opcao)
             {
                 case 1:
@@ -44,6 +46,48 @@ public class TerminalApp
 
     }
 
+    private void ListarEstoque()
+    {
+        Console.Clear();
+        string listagem = "*********************NOKIAS**********************\n";
+        
+        foreach(Nokia nokia in ListaNokia)
+        {
+            listagem += $"Modelo: {nokia.Modelo} | IMEI: {nokia.IMEI}\n";
+        }
+
+        listagem += "\n*********************IPHONES*********************\n";
+
+
+        foreach(Iphone iphone in ListaIphone)
+        {
+            listagem += $"Modelo: {iphone.Modelo} | IMEI: {iphone.IMEI}\n";
+        }
+
+        Console.WriteLine(listagem);
+
+        Console.ReadLine();
+    }
+
+    private void AdicionarNokia()
+    {
+
+    }
+
+    private void AdicionarIphone()
+    {
+
+    }
+
+    private void Sobre()
+    {
+
+    }
+
+    private void Sair()
+    {
+
+    }
 
     private void Inicio()
     {
