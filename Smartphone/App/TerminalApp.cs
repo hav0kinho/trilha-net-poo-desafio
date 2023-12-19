@@ -107,7 +107,7 @@ public class TerminalApp
 
         Console.WriteLine($"\nLinkedin: {this.LinkedinDev}");
         Console.WriteLine($"GitHub: {this.GitHubDev}");
-        Console.WriteLine("\nUm coração laranja me aguarda ❤ ❤ ❤ ❤");
+        Console.WriteLine("\nHá espaço para um coração laranja no meu peito, espero encontra-lo! ❤ ❤ ❤ ❤");
         
         Console.WriteLine("\n\nPressione qualquer tecla para voltar para o menu...");
         Console.ReadLine();
