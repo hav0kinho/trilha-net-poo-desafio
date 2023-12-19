@@ -1,6 +1,6 @@
-namespace DesafioPOO.Models
+namespace Smartphone.Models
 {
-    public abstract class Smartphone
+    public abstract class SmartphoneImp
     {
         public string Numero { get; set; }
         // TODO: Implementar as propriedades faltantes de acordo com o diagrama (X)
@@ -8,7 +8,7 @@ namespace DesafioPOO.Models
         private string IMEI { get; set; }
         private int Memoria { get; set; }
 
-        public Smartphone(string numero, string modelo, string imei, int memoria)
+        public SmartphoneImp(string numero, string modelo, string imei, int memoria)
         {
             this.Numero = numero;
             this.Modelo = modelo;

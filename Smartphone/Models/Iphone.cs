@@ -1,7 +1,7 @@
-namespace DesafioPOO.Models
+namespace Smartphone.Models
 {
     // TODO: Herdar da classe "Smartphone"
-    public class Iphone : Smartphone
+    public class Iphone : SmartphoneImp
     {
 
         public Iphone(string numero, string modelo, string imei, int memoria)
