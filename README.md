@@ -11,7 +11,13 @@ Você é responsável por modelar um sistema que trabalha com celulares. Para is
 Você precisa criar um sistema em .NET, do tipo console, mapeando uma classe abstrata e classes específicas para dois tipos de celulares: Nokia e iPhone. 
 Você deve criar as suas classes de acordo com o diagrama abaixo:
 
-![Diagrama classes](Imagens/diagrama.png)
+![Diagrama classes](./Smartphone/Imagens/diagrama.png)
+
+**Mas devido as alterações que foram feitas, as regras de encapsulamento foram modificadas para que atendesem as funcionalidades da aplicação do Terminal, deixando algumas propriedades públicas!**
+
+## Execução do projeto
+
+Para executar o projeto, você pode baixar o projeto ou importa-lo usando o *git clone https://github.com/hav0kinho/trilha-net-poo-desafio*! Após extrair ou possui a aplicação na sua máquina, basta você entrar na pasta *Smartphone* e usar o comando *dotnet run*, sendo executada a aplicação do terminal realizada!
 
 ## Regras e validações
 1. A classe **Smartphone** deve ser abstrata, não permitindo instanciar e servindo apenas como modelo.
