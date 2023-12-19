@@ -6,12 +6,16 @@ namespace Smartphone.App;
 public class TerminalApp
 {
     public string NomeDev {get; set;}
+    public string LinkedinDev {get; set;}
+    public string GitHubDev {get;set;}
     List<Nokia> ListaNokia {get; set;}
     List<Iphone> ListaIphone {get; set;}
 
-    public TerminalApp(string nome)
+    public TerminalApp(string nome, string linkedin, string github)
     {
         this.NomeDev = nome;
+        this.LinkedinDev = linkedin;
+        this.GitHubDev = github;
         this.ListaNokia = new List<Nokia>();
         this.ListaIphone = new List<Iphone>();
     }
@@ -23,7 +27,7 @@ public class TerminalApp
         {
             Console.Clear();
             this.Inicio();
-            opcao =  int.Parse(Console.ReadLine());
+            opcao = int.Parse(Console.ReadLine());
             switch(opcao)
             {
                 case 1:
@@ -40,7 +44,7 @@ public class TerminalApp
                     break;
                 case 5:
                     Sair();
-                    break;  
+                    break;
             }
         }
 
@@ -96,13 +100,13 @@ public class TerminalApp
     private void Sobre()
     {
         Console.Clear();
-        Console.WriteLine("Esse software foi desenvolvido durante o Bootcamp da Avanade,\nchamado Decola Tech 2024,na plataforma da DIO\n");
+        Console.WriteLine("Esse software foi desenvolvido durante o Bootcamp da Avanade,\nchamado Decola Tech 2024, na plataforma da DIO\n");
 
         Console.WriteLine("O Projeto inicial possuia apenas os modelos de Iphone, Nokia e\nSmartphone, onde esses eram apenas instaciados diretamente no Programa principal");
         Console.WriteLine("Fiz um incremento de funcionalidades, para simular uma aplicação\nsimples de terminal, onde o usuário pode navegar utilizando comandos básicos,\npodendo adicionar novos produtos ao estoque, listagem do estoque, e também a saida\ndo app de forma direta sem que precise utiliza o CTRL+C para finalizar a aplicação!");
 
-        Console.WriteLine("\nLinkedin: https://www.linkedin.com/in/ruallyson-moura/");
-        Console.WriteLine("GitHub: https://github.com/hav0kinho");
+        Console.WriteLine($"\nLinkedin: {this.LinkedinDev}");
+        Console.WriteLine($"GitHub: {this.GitHubDev}");
         Console.WriteLine("\nUm coração laranja me aguarda ❤ ❤ ❤ ❤");
         
         Console.WriteLine("\n\nPressione qualquer tecla para voltar para o menu...");
