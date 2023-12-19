@@ -17,7 +17,12 @@ Você deve criar as suas classes de acordo com o diagrama abaixo:
 
 ## Execução do projeto
 
-Para executar o projeto, você pode baixar o projeto ou importa-lo usando o *git clone https://github.com/hav0kinho/trilha-net-poo-desafio*! Após extrair ou possui a aplicação na sua máquina, basta você entrar na pasta *Smartphone* e usar o comando *dotnet run*, sendo executada a aplicação do terminal realizada!
+Para executar o projeto, você deve seguir os seguintes passos: 
+* Baixe o projeto ou importe ele usando o *git clone https://github.com/hav0kinho/trilha-net-poo-desafio*!
+* Entre na pasta *Smartphone*
+* Use o comando *dotnet run* 
+
+Com isso, será executada a aplicação do terminal!
 
 ## Regras e validações
 1. A classe **Smartphone** deve ser abstrata, não permitindo instanciar e servindo apenas como modelo.
