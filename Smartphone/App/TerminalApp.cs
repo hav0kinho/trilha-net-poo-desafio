@@ -89,12 +89,46 @@ public class TerminalApp
 
     private void AdicionarNokia()
     {
+        Console.Clear();
+        Console.Write("Qual o modelo do Nokia: ");
+        string modelo = Console.ReadLine();
+        Console.Write("Qual o numero de telefone: ");
+        string numero = Console.ReadLine();
+        Console.Write("Qual o IMEI: ");
+        string imei = Console.ReadLine();
+        Console.Write("Quantos GB de memória: ");
+        int memoria = int.Parse(Console.ReadLine());
 
+        Nokia novoNokia = new Nokia(numero: numero, modelo: modelo, imei: imei, memoria: memoria);
+        AdicionarNokiaNaLista(novoNokia);
+
+        Console.Clear();
+        
+        Console.WriteLine("Nokia adicionado com sucesso!");
+        Console.WriteLine("\nPressione qualquer tecla para continuar...");
+
+        Console.ReadLine();
     }
 
     private void AdicionarIphone()
     {
+        Console.Clear();
+        Console.Write("Qual o modelo do iPhone: ");
+        string modelo = Console.ReadLine();
+        Console.Write("Qual o numero de telefone: ");
+        string numero = Console.ReadLine();
+        Console.Write("Qual o IMEI: ");
+        string imei = Console.ReadLine();
+        Console.Write("Quantos GB de memória: ");
+        int memoria = int.Parse(Console.ReadLine());
 
+        Iphone novoIphone = new Iphone(numero: numero, modelo: modelo, imei: imei, memoria: memoria);
+        AdicionarIphoneNaLista(novoIphone);
+
+        Console.Clear();
+        Console.WriteLine("iPhone adicionado com sucesso!");
+        Console.WriteLine("\nPressione qualquer tecla para continuar...");
+        Console.ReadLine();
     }
 
     private void Sobre()
@@ -134,5 +168,15 @@ $@"
 =-=-=Desenvolvido por {NomeDev} durante DecolaTech 2024=-=-=
 "; 
         Console.WriteLine(Inicio);
+    }
+
+    private void AdicionarNokiaNaLista(Nokia novoNokia)
+    {
+        this.ListaNokia.Add(novoNokia);
+    }
+
+    private void AdicionarIphoneNaLista(Iphone novoIphone)
+    {
+        this.ListaIphone.Add(novoIphone);
     }
 }
