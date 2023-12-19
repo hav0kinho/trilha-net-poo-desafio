@@ -100,7 +100,8 @@ public class TerminalApp
 
     private void Sair()
     {
-
+        Console.Clear();
+        Environment.Exit(0);
     }
 
     private void Inicio()
