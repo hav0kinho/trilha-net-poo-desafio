@@ -95,7 +95,18 @@ public class TerminalApp
 
     private void Sobre()
     {
+        Console.Clear();
+        Console.WriteLine("Esse software foi desenvolvido durante o Bootcamp da Avanade,\nchamado Decola Tech 2024,na plataforma da DIO\n");
 
+        Console.WriteLine("O Projeto inicial possuia apenas os modelos de Iphone, Nokia e\nSmartphone, onde esses eram apenas instaciados diretamente no Programa principal");
+        Console.WriteLine("Fiz um incremento de funcionalidades, para simular uma aplicação\nsimples de terminal, onde o usuário pode navegar utilizando comandos básicos,\npodendo adicionar novos produtos ao estoque, listagem do estoque, e também a saida\ndo app de forma direta sem que precise utiliza o CTRL+C para finalizar a aplicação!");
+
+        Console.WriteLine("\nLinkedin: https://www.linkedin.com/in/ruallyson-moura/");
+        Console.WriteLine("GitHub: https://github.com/hav0kinho");
+        Console.WriteLine("\nUm coração laranja me aguarda ❤ ❤ ❤ ❤");
+        
+        Console.WriteLine("\n\nPressione qualquer tecla para voltar para o menu...");
+        Console.ReadLine();
     }
 
     private void Sair()
